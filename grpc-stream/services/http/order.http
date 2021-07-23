@@ -1,0 +1,8 @@
+POST http://localhost:9468/v1/orders HTTP/1.1
+content-type: application/json
+
+{
+    "order_no": "345342543532",
+    "order_money": 101,
+    "user_id": 233
+}

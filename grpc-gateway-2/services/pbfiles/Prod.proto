@@ -1,0 +1,26 @@
+syntax = "proto3";
+package services;
+option go_package = "../services"; // 指定go_package，否则执行命令会出错
+import "google/api/annotations.proto";
+
+message ProdRequest {
+    int32 prod_id = 1; // 传入的商品id
+}
+message ProdResponse {
+    int32 prod_stock = 1; // 商品库存
+}
+message QuerySize {
+    int32 size = 1; // 页的大小
+}
+message ProdResponseList { // 返回商品库存集合
+    repeated ProdResponse productes = 1; // repeated表示类似于其他语言的东西，术语是啥我就不深究了，无妨
+}
+
+service ProdService {
+    rpc GetProdStock (ProdRequest) returns (ProdResponse) {
+        option (google.api.http) = {
+            get: "/v1/prod/{prod_id}" // get请求路径映射
+        };
+    }
+    rpc GetProdStocks(QuerySize) returns (ProdResponseList) {}
+}
