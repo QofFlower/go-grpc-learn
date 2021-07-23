@@ -73,7 +73,7 @@ func (t *ProdService) GetProdStock(context.Context, *ProdRequest) (*ProdResponse
 
 ```
 
-![image-20210721162556461](C:\Users\huangwenmeng\AppData\Roaming\Typora\typora-user-images\image-20210721162556461.png)
+![image-20210721162556461](https://raw.githubusercontent.com/QofFlower/go-grpc-learn/master/images/image-20210721162556461.png)
 
 在主目录下添加server.go文件
 
@@ -100,7 +100,7 @@ func main() {
 
 client工程部分
 
-![image-20210721171135301](C:\Users\huangwenmeng\AppData\Roaming\Typora\typora-user-images\image-20210721171135301.png)
+![image-20210721171135301](https://raw.githubusercontent.com/QofFlower/go-grpc-learn/master/images/image-20210721171135301.png)
 
 Prod.pb.go是和server工程一样的
 
@@ -161,7 +161,7 @@ req -new -x509 -days 3650 -key ca.key -out ca.pem
 
 
 
-![image-20210721173924982](C:\Users\huangwenmeng\AppData\Roaming\Typora\typora-user-images\image-20210721173924982.png)
+![image-20210721173924982](https://raw.githubusercontent.com/QofFlower/go-grpc-learn/master/images/image-20210721173924982.png)
 
 > 注意：Common name填写localhost
 
@@ -193,7 +193,7 @@ x509 -req -sha256 -CA ca.pem -CAkey ca.key -CAcreateserial -days 3650 -in client
 
 在服务端工程内的cert目录下，将三个文件ca.pem, server.key, server.pem粘贴过去
 
-![image-20210721180011393](C:\Users\huangwenmeng\AppData\Roaming\Typora\typora-user-images\image-20210721180011393.png)
+![image-20210721180011393](https://raw.githubusercontent.com/QofFlower/go-grpc-learn/master/images/image-20210721180011393.png)
 
 同样的，将ca.pem, client.key, client.pem粘贴到client工程下的cert目录中
 
@@ -304,7 +304,7 @@ func main() {
 
 ```
 
-![image-20210722103242505](C:\Users\huangwenmeng\AppData\Roaming\Typora\typora-user-images\image-20210722103242505.png)
+![image-20210722103242505](https://raw.githubusercontent.com/QofFlower/go-grpc-learn/master/images/image-20210722103242505.png)
 
 ## 双向认证下rpc-gateway的使用
 
@@ -322,9 +322,9 @@ go get -u github.com/golang/protobuf/protoc-gen-go
 
 找到下载的grpc-gateway包并将google目录下的api拷贝过来，vscode下不好定位所下载的包，可以进入golang查看
 
-![image-20210722153235553](C:\Users\huangwenmeng\AppData\Roaming\Typora\typora-user-images\image-20210722153235553.png)
+![image-20210722153235553](https://raw.githubusercontent.com/QofFlower/go-grpc-learn/master/images/image-20210722153235553.png)
 
-![image-20210722153306829](C:\Users\huangwenmeng\AppData\Roaming\Typora\typora-user-images\image-20210722153306829.png)
+![image-20210722153306829](https://raw.githubusercontent.com/QofFlower/go-grpc-learn/master/images/image-20210722153306829.png)
 
 
 
@@ -415,7 +415,7 @@ func main() {
 
 访问 http://localhost:9468/v1/prod/998
 
-![image-20210722153505435](C:\Users\huangwenmeng\AppData\Roaming\Typora\typora-user-images\image-20210722153505435.png)
+![image-20210722153505435](https://raw.githubusercontent.com/QofFlower/go-grpc-learn/master/images/image-20210722153505435.png)
 
 
 
@@ -909,7 +909,7 @@ func main() {
 
 再像定义的接口发送POST请求
 
-![image-20210722180935480](C:\Users\huangwenmeng\AppData\Roaming\Typora\typora-user-images\image-20210722180935480.png)
+![image-20210722180935480](https://raw.githubusercontent.com/QofFlower/go-grpc-learn/master/images/image-20210722180935480.png)
 
 
 
@@ -1059,7 +1059,7 @@ func main() {
 
 结果
 
-![image-20210723093320253](C:\Users\huangwenmeng\AppData\Roaming\Typora\typora-user-images\image-20210723093320253.png)
+![image-20210723093320253](https://raw.githubusercontent.com/QofFlower/go-grpc-learn/master/images/image-20210723093320253.png)
 
 #### 客户端流
 
